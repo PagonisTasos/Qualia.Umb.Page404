@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+		
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <Product>Qualia.Umb.Page404</Product>
+        <PackageId>Qualia.Umb.Page404</PackageId>
+        <Title>Qualia.Umb.Page404</Title>
+		<Description>
+			An umbraco cms package adding a 404 docType and a last chance content finder pointing to it.
+		</Description>
+		<PackageProjectUrl>https://github.com/PagonisTasos/Qualia.Umb.Page404</PackageProjectUrl>
+        <PackageTags>umbraco plugin package; last chance finder 404</PackageTags>
+        <RootNamespace>Qualia.Umb.Page404</RootNamespace>
+		<Version>1.0.4</Version>
+		<Authors>Pagonis Tasos</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="package.zip" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="package.zip">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Qualia.Umb.PackageMigration" Version="1.1.0" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.1.2" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.1.2" />
+    </ItemGroup>
+</Project>
